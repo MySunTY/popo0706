@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+footer{
+    background-color: bisque;
+    width:100%;
+    position : absolute;
+    bottom: 0px;
+    text-align: center;
+    height: 50px;
+    margin: auto;
+}
+footer ul{
+    
+    list-style: none;
+   
+}
+footer ul li{
+	float : left;
+	width: 181px;
+	display: block;
+	margin-right: 50px;
+	
+}
+footer ul a{
+    text-decoration: none;
+    width: 150px;
+	display: block;
+	border-right: 1px solid gray;
+	
+}
