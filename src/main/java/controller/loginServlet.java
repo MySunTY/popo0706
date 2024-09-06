@@ -5,6 +5,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import DAO.MemberDAO;
+import DAO.BoardDAO;
+import java.util.*;
+import DTO.BoardDTO;
 
 
 @WebServlet("/login.do")
@@ -39,9 +42,18 @@ public class loginServlet extends HttpServlet {
 		}
 		
 		if(result==1) {
-			request.setAttribute("result", result);
+			session.setAttribute("result", result);
 			
 			session.setAttribute("loginUser", login_id);
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			RequestDispatcher dis = request.getRequestDispatcher("main.jsp");
 			dis.forward(request, response);

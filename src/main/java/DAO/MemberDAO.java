@@ -2,8 +2,6 @@ package DAO;
 
 import java.sql.*;
 
-import javax.servlet.http.HttpSession;
-
 import DTO.Member;
 
 public class MemberDAO {

@@ -5,9 +5,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>회원정보수정</title>
+		<link rel="stylesheet" href="CSS/header.css">
 	</head>
 	<body>
 		<div id="wrap">
+		<jsp:include page="header.jsp"></jsp:include>
 		
 			<h1>회원정보수정</h1>
 		<form method="post" action="update.do">

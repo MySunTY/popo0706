@@ -49,7 +49,7 @@
         		alert("회원가입이 되어있지 않습니다");
         	</script>
         </c:if>
-        
+       	
 
         </section>
         <footer>
@@ -72,6 +72,7 @@
 		});
 		
 		console.log(${result});
+		window.history.forward();
 		
 	</script>
 	</body>

@@ -5,9 +5,45 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    	<script>
+	
+	      document.addEventListener('DOMContentLoaded', function() {
+	        var calendarEl = document.getElementById('calendar');
+	        var calendar = new FullCalendar.Calendar(calendarEl, {
+	          initialView: 'dayGridMonth',
+	          selectable : true,
+	          
+	          dateClick : function (info){
+	        	  console.log(info.dateStr);
+	          }
+	        });
+	        calendar.render();
+	      });
+
+    </script>
 		<title>main.jsp</title>
 		<link rel="stylesheet" href="CSS/header.css">
 		<link rel="stylesheet" href="CSS/footer.css">
+		<style>
+			
+			#info{
+				width: 500px;
+				margin:0 auto;
+				text-align : center;
+			}
+			
+			#content{
+				position: relative;
+			}
+			
+			
+			#calendar{
+				width:500px;
+				height:500px;
+			}
+			
+		</style>
 	</head>
 	<body>
 		
@@ -24,8 +60,8 @@
 				<nav>
 	            <ul>
 	                <li><a href="main.jsp">Home</a></li>
-	                <li><a href="#">How to Use</a></li>
-	                <li><a href="#">MyPage</a></li>
+	                <li><a href="gongji.do?currentPage=1">Notice</a></li>
+	                <li><a href="#">Photo</a></li>
 	                <li><a href="update.do">회원정보수정</a></li>
 	                <c:if test="${grade=='관리자'}">
 						<li>
@@ -39,9 +75,22 @@
 	            </ul>
 	
 	        </nav>
+	        
+	        
 			</div>
-			<h1>${sessionScope.grade }</h1>
-			<h1>${sessionScope.loginUser }</h1>
+			
+			<div id="content">
+				
+				<div id="info">
+					<div id="calendar"></div>
+				
+				</div>
+			
+			
+			</div>
+			
+			
+			
 			
 		
 		
@@ -52,7 +101,10 @@
 			let out = document.getElementById("out");
 			out.addEventListener("click",function(){
 				alert("로그아웃 되었습니다");
+				window.history.forward();
 			})
+			
+			
 		</script>
 	</body>
 </html>
