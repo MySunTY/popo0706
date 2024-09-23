@@ -65,11 +65,12 @@
 					<th>비밀번호 확인</th>
 					<td><input type="password" id="pass"></td>
 				</tr>
-				<tr>
-					<th>hidden</th>
-					<td><input type="text" value="${showOne.pwd }" id="passcheck"></td>
-				</tr>
+				
+					
+					
+				
 			</table>
+			<input type="hidden" value="${showOne.pwd }" id="passcheck">
 			<div id="btns">
 				<button onclick="location.href='gongji.do?currentPage=1'">목록보기</button>
 				<button id="updateBtn">수정하기</button>

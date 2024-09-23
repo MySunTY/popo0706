@@ -6,13 +6,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>회원리스트</title>
+		<link rel="stylesheet" href="CSS/header.css">
+		<link rel="stylesheet" href="CSS/footer.css">
 		<style>
 			th , td{
 				border:1px solid black;
 			}
+			#wrap{
+				text-align : center;
+			}
+			table{
+				width: 80%;
+				margin: auto;
+			}
+			
 		</style>
 	</head>
 	<body>
+			<div id="wrap">
+				<jsp:include page="header.jsp"></jsp:include>
 		<%
 			Connection conn = null;
 			Statement stmt = null;
@@ -29,6 +41,7 @@
 				stmt = conn.createStatement();
 				rs = stmt.executeQuery(sql);
 				%>
+				
 					<h1>회원리스트</h1>
 					<table>
 					<tr>
@@ -84,6 +97,7 @@
 				%>
 				
 				</table>
+				
 				<%
 			}catch(Exception e){
 				System.out.println("member_list.jsp ing error" +e);
@@ -99,5 +113,7 @@
 			}
 			
 		%>
+		
+		</div>
 	</body>
 </html>

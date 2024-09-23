@@ -32,6 +32,10 @@
 			h1{
 				text-align : center;
 			}
+			.imgs{
+				width: 100px;
+				height: 50px;
+			}
 			
 			
 			

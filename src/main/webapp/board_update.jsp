@@ -98,7 +98,16 @@
 			let updateBtn = document.getElementById("updateBtn");
 			updateBtn.addEventListener("click",function(){
 				frm.submit();
-			})
+			});
+			
+			let deleteBtn = document.getElementById("deleteBtn");
+			deleteBtn.addEventListener("click",function (){
+				
+					alert("정상적으로 삭제되었습니다 게시글 목록으로 이동합니다");
+					location.href='boardDeleteOne.do?num=${showOne.num}';	
+				
+				
+			});
 			
 		</script>
 	</body>

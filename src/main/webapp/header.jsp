@@ -4,8 +4,8 @@
 <div id=header>
 	<header>
 	            <h1>
-	                <img src="" alt="logo" width="30" height="30">
-	                <a href="index.jsp">원하는 모든것을 관리하세요</a>
+	                <img src="img/pngwing.com-35.png" alt="logo" class="imgs" width="100" height="50">
+	                <a href="main.jsp">원하는 모든것을 관리하세요</a>
 	            </h1>
 	            
 	 </header>
@@ -14,7 +14,7 @@
 	            <ul>
 	                <li><a href="main.do">Home</a></li>
 	                <li><a href="gongji.do?currentPage=1">Notice</a></li>
-	                <li><a href="#">Photo</a></li>
+	                <li><a href="photo.do?currentPage=1">Photo</a></li>
 	                <li><a href="update.do">회원정보수정</a></li>
 	                <c:if test="${grade=='관리자'}">
 						<li>

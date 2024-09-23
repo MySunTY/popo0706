@@ -12,7 +12,7 @@
 		<body>
         <header>
             <h1>
-                <!-- <img src=".png" alt="logo" width="30" height="30"> -->
+                <img src="img/pngwing.com-35.png" alt="logo" class="imgs" width="100" height="50">
                 <a href="index.jsp">원하는 모든것을 관리하세요</a>
             </h1>
             

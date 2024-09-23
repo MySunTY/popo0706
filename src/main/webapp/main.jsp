@@ -7,19 +7,32 @@
 		<meta charset="UTF-8">
 		<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
     	<script>
-	
+		 var calendar;	
 	      document.addEventListener('DOMContentLoaded', function() {
 	        var calendarEl = document.getElementById('calendar');
-	        var calendar = new FullCalendar.Calendar(calendarEl, {
+	        calendar = new FullCalendar.Calendar(calendarEl, {
 	          initialView: 'dayGridMonth',
 	          selectable : true,
+	          events:[
+	        	  {
+	        		title: "추석",
+	        	  	start: "2024-09-16",
+	        	  	end :  "2024-09-19"
+	        	  }
+	          ], 
 	          
 	          dateClick : function (info){
 	        	  console.log(info.dateStr);
+	        	  addEventCalendar({start:info.dateStr});
 	          }
 	        });
 	        calendar.render();
 	      });
+	      
+	      function addEventToCalendar(event){
+	    	  calendar.addEvent(event);
+	      }
+	      
 
     </script>
 		<title>main.jsp</title>
@@ -42,6 +55,10 @@
 				width:500px;
 				height:500px;
 			}
+			.imgs{
+				width: 100px;
+				height: 50px;
+			}
 			
 		</style>
 	</head>
@@ -51,8 +68,8 @@
 			<div id=header>
 				<header>
 				            <h1>
-				                <img src="" alt="logo" width="30" height="30">
-				                <a href="index.jsp">원하는 모든것을 관리하세요</a>
+				                <img src="img/pngwing.com-35.png" alt="logo" class="imgs" width="100" height="50">
+				                <a href="main.jsp">원하는 모든것을 관리하세요</a>
 				            </h1>
 				            
 				 </header>
@@ -61,7 +78,7 @@
 	            <ul>
 	                <li><a href="main.jsp">Home</a></li>
 	                <li><a href="gongji.do?currentPage=1">Notice</a></li>
-	                <li><a href="#">Photo</a></li>
+	                <li><a href="photo.do?currentPage=1">Photo</a></li>
 	                <li><a href="update.do">회원정보수정</a></li>
 	                <c:if test="${grade=='관리자'}">
 						<li>
